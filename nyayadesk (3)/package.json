@@ -1,0 +1,8 @@
+{
+  "name": "nyayadesk",
+  "private": true,
+  "description": "NyayaDesk — agentic client intake (Aerophilia 2026)",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.9"
+  }
+}
