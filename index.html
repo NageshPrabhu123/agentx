@@ -976,7 +976,10 @@ async function callGemini(m, i) {
         clearTimeout(t);
       } catch (e) { lastErr = `${model}: ${e.name === 'AbortError' ? 'timeout' : e.message}`; addTrace('error', lastErr); break; }
       if (res.ok) {
-        if (model !== S.model) { S.model = model; $('#modePill').innerHTML = `<i style="background:#7cc4ff"></i>Gemini live · ${esc(model)}`; }
+        const llm = res.headers.get('x-llm') || `gemini · ${model}`;
+        if (model !== S.model) S.model = model;
+        $('#modePill').innerHTML = `<i style="background:#7cc4ff"></i>Live · ${esc(llm)}`;
+        addTrace('obs', `LLM answered → ${llm}`);
         return res.json();
       }
       const errTxt = await res.text();
