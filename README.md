@@ -137,4 +137,4 @@ As the rulebook allows, we used an AI coding assistant (**Claude**, by Anthropic
 At runtime, the agent's reasoning is done by **Google Gemini 3.5 Flash-Lite (with automatic fallback to backup models)**.
 
 ## Team
-Team Dhoomakethu — MITE, Moodbidri
+AmawasyeHaters
